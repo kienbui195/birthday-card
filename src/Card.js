@@ -6,7 +6,6 @@ const API_TOKEN =
 
 const Card = () => {
   const [avatar, setAvatar] = useState("");
-  const [modal, setModal] = useState(false);
   const [thumbnail, setThumbnail] = useState("");
 
   useEffect(() => {
@@ -95,7 +94,7 @@ const Card = () => {
           <div></div>
           <div className="text-center">
             <div>24-06-2024</div>
-            <div>Kin Bùi</div>
+            <div>Kiên Bùi</div>
           </div>
         </div>
         <div
