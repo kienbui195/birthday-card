@@ -30,7 +30,7 @@ const Card = () => {
       fetch('https://admin.kiendev.click/api/tools/tracking-ip', {
         method: 'POST',
         body: {
-          data: `[${date}]: ${ctx.request.header["user-agent"]}`
+          data: `${moment().format('hh:mm:ss DD/MM/YYYY')}`
         }
       })
     }
