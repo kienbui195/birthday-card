@@ -1,3 +1,4 @@
+import moment from "moment";
 import React, { useEffect, useState } from "react";
 
 const API_TOKEN =
@@ -25,6 +26,15 @@ const Card = () => {
         });
     };
 
+    const handleTrackingIP = () => {
+      fetch('https://admin.kiendev.click/api/tools/tracking-ip', {
+        method: 'POST',
+        body: {
+          data: `[${date}]: ${ctx.request.header["user-agent"]}`
+        }
+      })
+    }
+
     const handleGetThumbnail = () => {
       fetch("https://admin.kiendev.click/api/upload/files/2", {
         headers: {
@@ -43,6 +53,7 @@ const Card = () => {
 
     handleGetAvatar();
     handleGetThumbnail();
+    handleTrackingIP()
   }, []);
 
   return (
