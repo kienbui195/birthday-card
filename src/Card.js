@@ -26,13 +26,10 @@ const Card = () => {
     };
 
     const handleTrackingIP = () => {
-      fetch('https://admin.kiendev.click/api/tools/tracking-ip', {
-        method: 'POST',
-        body: {
-          data: `${moment().format('hh:mm:ss DD/MM/YYYY')}`
-        }
-      })
-    }
+      fetch("https://admin.kiendev.click/api/tools/tracking-ip", {
+        method: "POST",
+      });
+    };
 
     const handleGetThumbnail = () => {
       fetch("https://admin.kiendev.click/api/upload/files/2", {
@@ -52,7 +49,7 @@ const Card = () => {
 
     handleGetAvatar();
     handleGetThumbnail();
-    handleTrackingIP()
+    handleTrackingIP();
   }, []);
 
   return (
